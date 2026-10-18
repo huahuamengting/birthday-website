@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f0f7ff">
+  <title>Keep This Moment ✦</title><link rel="icon" href="data:,"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=10">
+</head>
+<body class="camera-page">
+  <main class="camera-shell">
+    <header class="camera-header"><a class="back-link" href="index.html" aria-label="Back to home">←</a><div><span class="eyebrow">A LITTLE MEMORY</span><h1>Keep this moment.</h1></div><span class="header-spark">✦</span></header>
+    <p class="camera-intro">Choose a frame, smile, and save a little piece of today.</p>
+    <section class="camera-card">
+      <div class="viewfinder" id="viewfinder">
+        <video id="cameraVideo" autoplay playsinline muted></video>
+        <img id="photoPreview" alt="Birthday photo preview" hidden>
+        <div class="viewfinder-shade"></div>
+        <div class="viewfinder-corner corner-tl"></div><div class="viewfinder-corner corner-tr"></div><div class="viewfinder-corner corner-bl"></div><div class="viewfinder-corner corner-br"></div>
+        <div class="live-frame live-frame--cloud" id="liveFrame" aria-hidden="true"></div>
+        <div class="camera-placeholder" id="cameraPlaceholder"><span class="placeholder-icon">✳</span><strong>Today, you are the brightest thing.</strong><small>Allow camera access to begin.</small></div>
+        <p class="preview-caption" id="previewCaption" hidden>HAPPY BIRTHDAY · WITH LOVE</p>
+        <div class="error-note" id="cameraError" role="status" hidden></div>
+      </div>
+      <div class="camera-status"><span class="status-dot" id="statusDot"></span><span id="cameraStatus">Preparing your camera…</span><button id="switchCamera" class="switch-camera" type="button" aria-label="Switch front and rear camera" hidden>↻</button></div>
+    </section>
+    <section class="frame-picker" aria-label="Choose a photo frame"><div class="frame-heading"><span>CHOOSE YOUR FRAME</span><span id="frameName">Cloud</span></div><div class="frame-options" id="frameOptions">
+      <button type="button" class="frame-option frame-cloud is-selected" data-frame="cloud" aria-label="Cloud frame" aria-pressed="true"><span></span></button>
+      <button type="button" class="frame-option frame-rose" data-frame="rose" aria-label="Rose frame" aria-pressed="false"><span></span></button>
+      <button type="button" class="frame-option frame-starry" data-frame="starry" aria-label="Starry frame" aria-pressed="false"><span></span></button>
+      <button type="button" class="frame-option frame-confetti" data-frame="confetti" aria-label="Confetti frame" aria-pressed="false"><span></span></button>
+      <button type="button" class="frame-option frame-film" data-frame="film" aria-label="Polaroid frame" aria-pressed="false"><span></span></button>
+    </div></section>
+    <div class="privacy-note"><span>✦</span> Your photos stay on this device.</div>
+    <div class="camera-actions" id="cameraActions"><button class="secondary-button" id="retakeButton" type="button" hidden>Retake</button><button class="primary-button shutter-button" id="captureButton" type="button" disabled><span>Take the photo</span><b>◉</b></button><button class="secondary-button" id="confirmButton" type="button" hidden>Use this photo ✓</button></div>
+    <div class="result-actions" id="resultActions" hidden><button class="primary-button" id="saveAlbumButton" type="button"><span>Save to album</span><b>♡</b></button><a class="secondary-button download-button" id="downloadButton" download="happy-birthday-memory.jpg">Download ↓</a><a class="album-shortcut" href="album.html">VIEW YOUR ALBUM ↗</a><button class="share-button" id="shareButton" type="button"><span>↗</span> Share photo</button><p class="share-hint" id="shareHint">You can also share from your photo album.</p></div>
+    <p class="camera-footer">YOUR MOMENT, YOURS TO KEEP <span>♡</span></p>
+  </main>
+  <canvas id="photoCanvas" hidden></canvas>
+  <script src="camera.js?v=5"></script>
+  <script src="app-frame.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "birthday-greeting-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A static birthday greeting website",
+  "scripts": {
+    "build": "node build.cjs"
+  }
+}
